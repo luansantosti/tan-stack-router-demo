@@ -16,8 +16,6 @@ export const Route = new FileRoute('/player').createRoute({
 function PlayerComponent() {
   const playersQuery = useSuspenseQuery(playerQueryOptions(Route.useLoaderDeps().playerId as string))
   const player = playersQuery.data
-  
-  console.log('playerQuery', player)
 
   return (
     <div className='p-4 shadow-sm mt-8 rounded-md bg-white'>
